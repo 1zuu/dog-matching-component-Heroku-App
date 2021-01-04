@@ -1,3 +1,5 @@
 stopwords
-RegexpTokenizer
-WordNetLemmatizer
+wordnet 
+porter_test 
+reuters 
+punkt 
