@@ -7,6 +7,7 @@ import pandas as pd
 import tensorflow as tf
 from sklearn.utils import shuffle
 
+from nltk
 nltk.data.path.append('./nltk_data/')
 
 from nltk.corpus import stopwords
