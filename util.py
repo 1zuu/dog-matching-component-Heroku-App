@@ -105,14 +105,16 @@ def load_inference_data():
             for img_name in os.listdir(label_dir):
                 img_ = img_name.split('.')[0].strip()
                 if img_ not in img_names:
+                    label_class = dog_classes[label]
                     img_path = os.path.join(label_dir, img_name)
+                    url_path = os.path.join(cloud_image_dir, label_class, img_name)
                     img = cv.imread(img_path)
                     img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
                     img = cv.resize(img, target_size)
                     img = preprocessing_function(img)
                     inference_images.append(img)
                     image_labels.append(label)
-                    url_paths.append(img_path)
+                    url_paths.append(url_path)
 
         inference_images = np.array(inference_images).astype('float32')
         image_labels = np.array(image_labels).astype('str')

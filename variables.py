@@ -24,7 +24,15 @@ rcn_converter_path = "weights/rcn_model.tflite"
 host = '0.0.0.0'
 port = 5000
 inference_save_path = 'weights/inference_images.npz'
-dog_classes = {'shih tzu', 'papillon', 'maltese', 'afghan hound', 'beagle'}
+dog_classes = {
+            'shih tzu' : '0', 
+            'papillon' : '1', 
+            'maltese' : '2', 
+            'afghan hound' : '3', 
+            'beagle' : '4'
+            }
 n_neighbour_weights = 'weights/nearest neighbor weight folder/nearest neighbour {}.pkl'
 n_neighbour = 3
 min_test_sample = 30
+
+cloud_image_dir = "https://res.cloudinary.com/douc1omvg/image/upload/Dog_Matching_Component/Images/"
